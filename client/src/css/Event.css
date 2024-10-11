@@ -1,6 +1,6 @@
 .event-information {
     position: relative;
-    width: 350px;
+    min-width: 350px;
     height: 350px;
     padding: 0px;
     margin: 20px;
@@ -55,3 +55,4 @@
     padding: 10px;
     text-align: center;
 }
+

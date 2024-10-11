@@ -1,4 +1,3 @@
-// server/config/seed.js
 import { pool } from './database.js';
 
 const seedData = async () => {
@@ -12,13 +11,14 @@ const seedData = async () => {
       ('American Airlines Center', '2500 Victory Ave', 'Dallas', 'TX', '75219', '/images/americanairlines.jpg');
     `);
 
-    // Insert events
+    // Insert events with properly formatted dates and times
     await pool.query(`
       INSERT INTO events (title, date, time, location_id, image) VALUES
-      ('Concert A', '2023-10-15', '19:00', 1, '/images/concert_a.jpg'),
-      ('Concert B', '2023-10-20', '20:00', 2, '/images/concert_b.jpg'),
-      ('Concert C', '2023-10-25', '18:00', 3, '/images/concert_c.jpg'),
-      ('Concert D', '2023-10-30', '21:00', 4, '/images/concert_d.jpg');
+      ('Concert A', '2024-11-15', '19:00:00', 1, '/images/concert_a.jpg'),
+      ('Concert B', '2024-11-20', '20:00:00', 2, '/images/concert_b.jpg'),
+      ('Concert C', '2024-11-25', '18:00:00', 3, '/images/concert_c.jpg'),
+      ('Concert D', '2024-11-30', '21:00:00', 4, '/images/concert_d.jpg'),
+      ('Concert E', '2024-12-01', '18:00:00', 2, '/images/concert_e.jpg');  
     `);
 
     console.log('Data seeded successfully!');

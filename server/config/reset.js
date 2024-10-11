@@ -26,7 +26,7 @@ const createTables = async () => {
         id SERIAL PRIMARY KEY,
         title VARCHAR(255) NOT NULL,
         date DATE NOT NULL,
-        time TIME NOT NULL,
+        time TEXT NOT NULL,
         location_id INTEGER REFERENCES locations(id),
         image VARCHAR(255)
       );
